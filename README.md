@@ -375,7 +375,13 @@ for doc in docs:
 ```
 
 ## Gap years
+
+Find the original prize categories established in 1901 by looking at the distinct values of the "category" field for prizes from year 1901.
+Fetch ONLY the year and category from all the documents (without the "_id" field).
+Sort by "year" in descending order, then by "category" in ascending order.
+
 ```python
+
 # original categories from 1901
 original_categories = db.prizes.distinct("category", {"year": "1901"})
 print(original_categories)
