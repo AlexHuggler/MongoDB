@@ -466,6 +466,10 @@ Out[1]: [{'year': '1969'},
 ```
 
 ## The first five prizes with quarter shares
+
+Save to filter_ the filter document to fetch only prizes with one or more quarter-share laureates, i.e. with a "laureates.share" of "4".
+Save to projection the list of field names so that prize category, year and laureates' motivations ("laureates.motivation") may be fetched for inspection.
+Save to cursor a cursor that will yield prizes, sorted by ascending year. Limit this to five prizes, and sort using the most concise specification.
 ```python
 from pprint import pprint
 
@@ -481,6 +485,12 @@ pprint(list(cursor))
 ```
 
 ## Pages of particle-prized people
+
+
+Complete the function get_particle_laureates that, given page_number and page_size, retrieves a given page of prize data on laureates who have the word "particle" (use $regex) in their prize motivations ("prizes.motivation"). Sort laureates first by ascending "prizes.year" and next by ascending "surname".
+Collect and save the first nine pages of laureate data to pages.
+
+
 ```python
 from pprint import pprint
 
