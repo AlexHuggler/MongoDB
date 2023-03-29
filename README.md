@@ -409,6 +409,8 @@ In [2]: db.prizes.find(
 ```
 
 ## Recently single?
+Specify an index model that indexes first on category (ascending) and second on year (descending).
+Save a string report for printing the last single-laureate year for each distinct category, one category per line. To do this, for each distinct prize category, find the latest-year prize (requiring a descending sort by year) of that category (so, find matches for that category) with a laureate share of "1".
 ```python
 # Specify an index model for compound sorting
 index_model = [("category", 1), ("year", -1)]
@@ -427,6 +429,9 @@ print(report)
 ```
 
 ## Born and affiliated
+Specify an index model that indexes first on category (ascending) and second on year (descending).
+Save a string report for printing the last single-laureate year for each distinct category, one category per line. To do this, for each distinct prize category, find the latest-year prize (requiring a descending sort by year) of that category (so, find matches for that category) with a laureate share of "1".
+
 ```python
 from collections import Counter
 
