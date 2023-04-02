@@ -1,8 +1,4 @@
----
-title: Introduction to MongoDB in Python
-tags: python,database
-url: https://www.datacamp.com/courses/introduction-to-using-mongodb-for-data-science-with-python
----
+
 
 # 1. Flexibly Structured Data
 ## Count documents in a collection
