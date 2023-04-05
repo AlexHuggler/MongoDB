@@ -566,6 +566,17 @@ print(list(db.laureates.aggregate(pipeline)))
 ```
 
 ## Gap years, aggregated
+
+
+Make the $group stage output a document for each prize year (set "_id" to the field path for year) with the set of categories awarded that year.
+
+Given your intermediate collection of year-keyed documents, $project a field named "missing" with the (original) categories not awarded that year. Again, mind your field paths!
+
+Use a $match stage to only pass through documents with at least one missing prize category.
+
+Finally, add sort documents in descending order.
+
+
 ```python
 from collections import OrderedDict
 
